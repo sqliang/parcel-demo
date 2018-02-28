@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Toggle from '../components/Toggle';
 import Switch from '../components/Switch';
-// import favicon from '../static/favicon';
 
 // App 组件 state 数据格式定义
 interface AppState {
