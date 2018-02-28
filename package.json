@@ -1,0 +1,62 @@
+{
+  "name": "parcel-demo",
+  "version": "1.0.0",
+  "description": "parcel bundler demo(has Typescript with React)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development parcel ./src/index.html",
+    "build": "cross-env NODE_ENV=production parcel build ./src/index.html --public-url '/'",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/config/test-shim.js",
+      "<rootDir>/config/test-setup.js"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/config/test-preprocessor.js"
+    },
+    "testMatch": [
+      "**/__tests__/*.(test|spec).(ts|tsx|js)"
+    ]
+  },
+  "keywords": [
+    "Typescript",
+    "React",
+    "parcel",
+    "fis3"
+  ],
+  "author": "sqliang",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/enzyme": "^3.1.5",
+    "@types/jest": "^21.1.8",
+    "autoprefixer": "^8.0.0",
+    "cross-env": "^5.1.3",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "jest": "^21.2.1",
+    "parcel-bundler": "^1.2.0",
+    "parcel-plugin-typescript": "^0.2.0-angular.0",
+    "prettier": "^1.9.2",
+    "react-test-renderer": "^16.2.0",
+    "ts-jest": "^21.2.4",
+    "tslint": "^5.8.0",
+    "tslint-config-airbnb": "^5.4.2",
+    "tslint-config-prettier": "^1.6.0",
+    "tslint-react": "^3.2.0",
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "@types/react": "^16.0.29",
+    "@types/react-dom": "^16.0.3",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
